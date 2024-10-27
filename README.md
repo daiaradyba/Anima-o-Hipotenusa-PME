@@ -2,10 +2,15 @@
 # **Hipotenusa Animada – Perdendo Medo das Exatas**
 
 ## **Descrição**
-Este projeto é uma animação interativa feita em **p5.js**, criada para um **Reels** no Instagram, com o objetivo de demonstrar que a **hipotenusa** é o caminho mais curto em um triângulo retângulo. A interação permite que o usuário explore diferentes trajetórias com a ajuda de três botões: **"Baixo"**, **"Direito"**, e **"Hipotenusa"**.
+Este projeto é uma animação interativa feita em **p5.js**, criada para um **Reels** no Instagram, com o objetivo de demonstrar que a **hipotenusa** é o caminho mais curto em um triângulo retângulo. A interação permite que o usuário explore diferentes trajetórias com a ajuda de três botões: **"Baixo"**, **"Direito"**, e **"Hipotenusa"**. Funcionamento apenas para computador.
 
 Você também pode acessar o projeto online [aqui](https://daiaradyba.github.io/Hipotenusa-Animada/).
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0c72f84ca669fcea8f0cdcd60d48bbbef33a386f
 <img src="/assets/gif/Gif.gif">
 
 ## **Funcionamento**
