@@ -4,6 +4,8 @@
 ## **Descrição**
 Este projeto é uma animação interativa feita em **p5.js**, criada para um **Reels** no Instagram, com o objetivo de demonstrar que a **hipotenusa** é o caminho mais curto em um triângulo retângulo. A interação permite que o usuário explore diferentes trajetórias com a ajuda de três botões: **"Baixo"**, **"Direito"**, e **"Hipotenusa"**.
 
+Você também pode acessar o projeto online [aqui](https://daiaradyba.github.io/Hipotenusa-Animada/).
+
 ## **Funcionamento**
 
 ### **Botões e Funções**
@@ -39,7 +41,7 @@ Pressione **'S'** durante a execução para **salvar um arquivo PNG** da tela at
    ```bash
    git clone https://github.com/seu-usuario/hipotenusa-animada.git
    ```
-2. Abra o arquivo `index.html` no navegador.
+2. Abra o arquivo `index.html` no navegador ou acesse a [versão online](https://daiaradyba.github.io/Hipotenusa-Animada/).
 3. Interaja com os botões na tela para experimentar diferentes trajetórias.
 
 ## **Fórmulas Utilizadas**
