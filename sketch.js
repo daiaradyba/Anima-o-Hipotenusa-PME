@@ -10,7 +10,7 @@ let idleFrames = [], runningFrames = [];
 let targetX = null, targetY = null;
 let background1, background2, background3, background4, currentBackground;
 let distanciaPercorrida = 0;
-let controle = 0;
+let controle = null;
 let botaoBaixoAtivo = true;
 let botaoDireitoAtivo = true;
 
@@ -34,7 +34,7 @@ function setup() {
 function draw() {
   image(currentBackground, 0, 0, width, height);
 
-  if (controle === 3) {
+  if (controle === 'hipotenusa') {
     moverSimultaneamente(targetX, targetY, VELOCIDADE_X, VELOCIDADE_Y);
   } else {
     moverParaDestino();
@@ -85,27 +85,27 @@ function criarBotao(x, y, texto, cor) {
 function verificarCliqueNosBotoes() {
   if (mouseIsPressed) {
     if (botaoBaixo.overlapPoint(mouseX, mouseY) && botaoBaixoAtivo) {
-      iniciarMovimento(475, null, background1, 1);
+      iniciarMovimento('baixo', 475, null, background1);
       botaoBaixoAtivo = false;
       botaoBaixo.shapeColor = color(100);
     } else if (botaoDireito.overlapPoint(mouseX, mouseY) && botaoDireitoAtivo) {
-      iniciarMovimento(null, 400, background2, 2);
+      iniciarMovimento('direito', null, 400, background2);
       botaoDireitoAtivo = false;
       botaoDireito.shapeColor = color(100);
     } else if (botaoHipotenusa.overlapPoint(mouseX, mouseY)) {
       resetarPersonagem();
-      iniciarMovimento(475, 400, background3, 3);
+      iniciarMovimento('hipotenusa', 475, 400, background3);
     } else if (resetButton.overlapPoint(mouseX, mouseY)) {
       location.reload();
     }
   }
 }
 
-function iniciarMovimento(y, x, bg, novoControle) {
+function iniciarMovimento(tipoControle, y, x, bg) {
+  controle = tipoControle;
   targetY = y;
   targetX = x;
   currentBackground = bg;
-  controle = novoControle;
 }
 
 function resetarPersonagem() {
@@ -161,7 +161,7 @@ function desenharUI() {
   fill(0);
   textSize(20);
 
-  if (controle === 3) {
+  if (controle === 'hipotenusa') {
     distanciaPercorrida = parseFloat(
       dist(personagem.position.x, personagem.position.y, POSICAO_INICIAL_X, POSICAO_INICIAL_Y).toFixed(2)
     );
