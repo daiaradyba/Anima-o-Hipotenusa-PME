@@ -5,7 +5,7 @@ const VELOCIDADE_Y = 5;
 const LIMIAR_DISTANCIA = 10;
 
 let personagem, positionSprite;
-let startButton1, startButton2, startButton3, resetButton;
+let botaoBaixo, botaoDireito, botaoHipotenusa, resetButton;
 let idleFrames = [], runningFrames = [];
 let targetX = null, targetY = null;
 let background1, background2, background3, background4, currentBackground;
@@ -68,9 +68,9 @@ function carregarBackgrounds() {
 function carregarElementosUI() {
   positionSprite = createSprite(480, 110, 40, 40);
 
-  startButton1 = criarBotao(50, 800, 'Baixo', color(255, 0, 0));
-  startButton2 = criarBotao(150, 800, 'Direito', color(0, 255, 0));
-  startButton3 = criarBotao(250, 800, 'Hipotenusa', color(0, 0, 255));
+  botaoBaixo = criarBotao(50, 800, 'Baixo', color(255, 0, 0));
+  botaoDireito = criarBotao(150, 800, 'Direito', color(0, 255, 0));
+  botaoHipotenusa = criarBotao(250, 800, 'Hipotenusa', color(0, 0, 255));
   resetButton = criarBotao(350, 800, 'Resetar', color(128, 128, 128));
 }
 
@@ -84,15 +84,15 @@ function criarBotao(x, y, texto, cor) {
 
 function verificarCliqueNosBotoes() {
   if (mouseIsPressed) {
-    if (startButton1.overlapPoint(mouseX, mouseY) && botaoBaixoAtivo) {
+    if (botaoBaixo.overlapPoint(mouseX, mouseY) && botaoBaixoAtivo) {
       iniciarMovimento(475, null, background1, 1);
       botaoBaixoAtivo = false;
-      startButton1.shapeColor = color(100);
-    } else if (startButton2.overlapPoint(mouseX, mouseY) && botaoDireitoAtivo) {
+      botaoBaixo.shapeColor = color(100);
+    } else if (botaoDireito.overlapPoint(mouseX, mouseY) && botaoDireitoAtivo) {
       iniciarMovimento(null, 400, background2, 2);
       botaoDireitoAtivo = false;
-      startButton2.shapeColor = color(100);
-    } else if (startButton3.overlapPoint(mouseX, mouseY)) {
+      botaoDireito.shapeColor = color(100);
+    } else if (botaoHipotenusa.overlapPoint(mouseX, mouseY)) {
       resetarPersonagem();
       iniciarMovimento(475, 400, background3, 3);
     } else if (resetButton.overlapPoint(mouseX, mouseY)) {
@@ -153,9 +153,9 @@ function desenharUI() {
   textSize(16);
   textAlign(CENTER, CENTER);
 
-  text(startButton1.text, startButton1.position.x, startButton1.position.y);
-  text(startButton2.text, startButton2.position.x, startButton2.position.y);
-  text(startButton3.text, startButton3.position.x, startButton3.position.y);
+  text(botaoBaixo.text, botaoBaixo.position.x, botaoBaixo.position.y);
+  text(botaoDireito.text, botaoDireito.position.x, botaoDireito.position.y);
+  text(botaoHipotenusa.text, botaoHipotenusa.position.x, botaoHipotenusa.position.y);
   text(resetButton.text, resetButton.position.x, resetButton.position.y);
 
   fill(0);
