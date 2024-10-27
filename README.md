@@ -6,6 +6,8 @@ Este projeto é uma animação interativa feita em **p5.js**, criada para um **R
 
 Você também pode acessar o projeto online [aqui](https://daiaradyba.github.io/Hipotenusa-Animada/).
 
+Funcionamento apenas para computador.
+
 <img src="/assets/gif/Gif.gif">
 
 ## **Funcionamento**
