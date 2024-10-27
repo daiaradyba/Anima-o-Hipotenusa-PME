@@ -20,7 +20,7 @@ Este projeto é uma animação interativa feita em **p5.js**, criada para um **R
 - **Hipotenusa**  
   - Movimenta o personagem diagonalmente (X e Y) até o ponto final, representando a **hipotenusa**.  
   - A distância percorrida é calculada como **distância euclidiana**:  
-    \[ d = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2} \]  
+    `d = sqrt((x2 - x1)^2 + (y2 - y1)^2)`  
   - Quando o movimento termina, o plano de fundo muda para indicar a conclusão.
 
 - **Resetar**  
@@ -44,10 +44,10 @@ Pressione **'S'** durante a execução para **salvar um arquivo PNG** da tela at
 
 ## **Fórmulas Utilizadas**
 - **Distância Euclidiana:**  
-  \[ d = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2} \]
+  `d = sqrt((x2 - x1)^2 + (y2 - y1)^2)`
   
 - **Distância Linear:**  
-  \[ \Delta x = x_2 - x_1 \quad 	ext{e} \quad \Delta y = y_2 - y_1 \]
+  `Δx = x2 - x1` e `Δy = y2 - y1`
 
 ## **Licença**
 Este projeto está sob a **licença MIT**. Consulte o arquivo [LICENSE](LICENSE) para mais informações.
