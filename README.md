@@ -34,4 +34,20 @@ Pressione **'S'** durante a execução para **salvar um arquivo PNG** da tela at
 - **HTML5 e JavaScript**: Base para a execução no navegador.
 - **Canva**: Ferramenta de design opcional para criar backgrounds.
 
-## **Como Usar
+## **Como Usar**
+1. Clone o repositório para sua máquina:
+   ```bash
+   git clone https://github.com/seu-usuario/hipotenusa-animada.git
+   ```
+2. Abra o arquivo `index.html` no navegador.
+3. Interaja com os botões na tela para experimentar diferentes trajetórias.
+
+## **Fórmulas Utilizadas**
+- **Distância Euclidiana:**  
+  \[ d = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2} \]
+  
+- **Distância Linear:**  
+  \[ \Delta x = x_2 - x_1 \quad 	ext{e} \quad \Delta y = y_2 - y_1 \]
+
+## **Licença**
+Este projeto está sob a **licença MIT**. Consulte o arquivo [LICENSE](LICENSE) para mais informações.
